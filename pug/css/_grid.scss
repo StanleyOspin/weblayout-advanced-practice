@@ -1,0 +1,13 @@
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+
+	&__item {
+		width: 275px;
+		margin-bottom: $grid-gap;
+
+		&:not(:nth-child(4n)) {
+			margin-right: $grid-gap;
+		}
+	}
+}

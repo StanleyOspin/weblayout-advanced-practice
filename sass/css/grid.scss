@@ -1,0 +1,15 @@
+@import '_variables.scss';
+@import '_mixins.scss';
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    @include clearListStyles;
+    &__item {
+        width: 275px;
+        margin-bottom: $gridGutter;
+        &:not(:nth-child(4n)) {
+            margin-right: $gridGutter;
+        }
+    } 
+}

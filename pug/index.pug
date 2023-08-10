@@ -1,0 +1,21 @@
+doctype html 
+html(lang="en")
+	head 
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title Document 
+		link(rel="stylesheet" href="../css/style.css")
+	body
+		- var products = [{title: 'Iphone 12 Pro Max 265gb', price: '129 000 р'},{title: 'Энергетический напиток Red Bull', price: '136 р'},{title: 'Фотоаппарат Canon EOS M50 Kit', price: '65 000 р'},{title: 'Метеостанция Xiaomi Mijia Bluetooth', price: '469 р'},{title: 'Настенный светильник MW-Light', price: '8 500 р'}] 
+		.container
+			ul.grid
+				each product in products
+					li.grid__item 
+						article.card 
+							a.card__image(href="#") 
+								img(src="../img/no-product-image-available.png" alt="Нет изображения товара")
+							h3.card__title 
+								a(href="#")= product.title
+							span.card__price= product.price	
+
